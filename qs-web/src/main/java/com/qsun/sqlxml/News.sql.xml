@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql-statement namespace="News">
+	<!-- 动态SQL处理 -->
+	<sql id="pager">
+		<![CDATA[ 
+			from news n where 1=1 
+            <% if(!isEmpty(status)){ %>
+                    and n.status = #'$status$'#
+            <% } %>
+    	]]>
+	</sql>
+	
+	<sql id="pager1">
+		<![CDATA[ 
+			from news n where 1=1 
+            <% if(!isEmpty(status)){ %>
+                    and n.status = #'$status$'#
+            <% } %>
+             <% if(!isEmpty(source)){ %>
+                    and n.source = #'$source$'#
+            <% } %>
+    	]]>
+	</sql>
+</sql-statement>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<script type="text/javascript" src="${base}/assets/biz-logic/js/lrtk.js"></script>
+	<% include("../common/common.html"){} %>
+	<body>
+	<% include("../common/nav-head.html"){} %>
+		<!-- 代码 banner开始 -->
+		<div id="playBox">
+			<div class="pre"></div>
+			<div class="next"></div>
+			<div class="smalltitle">
+			   <ul>
+				  <li class="thistitle"></li>
+				  <li></li>
+				  <li></li>
+				  <li></li>                
+				</ul>
+			</div>
+			<ul class="oUlplay">
+				<li><img src="${base}/assets/biz-logic/images/img/banner1.jpg" /></li>
+				<li><img src="${base}/assets/biz-logic/images/img/banner2.jpg" /></li>
+				<li><img src="${base}/assets/biz-logic/images/img/banner3.jpg" /></li>
+				<li><img src="${base}/assets/biz-logic/images/img/banner4.jpg" /></li>          
+			</ul>
+		</div>
+		<!-- 代码 banner结束 -->
+        
+        <!-- 业务开始 -->
+        <div class="scroll-content">
+           <p class="terminal"><a href="/solution"><img src="${base}/assets/biz-logic/images/intelligent.jpg" /></a></p>
+           <p class="terminal"><a href="/solution"><img src="${base}/assets/biz-logic/images/terminal.jpg" /></a></p>
+           <p class="terminal" style="margin-right:0px;"><a href="/solution"><img src="${base}/assets/biz-logic/images/speak.jpg" /></a></p>
+        </div>
+        <div class="clear"></div>
+        <!-- 业务结束 -->
+	
+		<!-- 代码 vedio开始 -->
+		<div class="vedio-content">
+			<div class="vedio-left" id="vedio-left-1">
+				<!--鼠标经过弹出的视频图标-->
+				<div id="vedio-cover" style="position: absolute; width: 537px; height: 355px; display: none; background: rgb(102, 102, 102);">
+					<img src="${base}/assets/biz-logic/images/vedio-a9-1.jpg" width="755" height="480">					
+				</div>
+				<!--鼠标经过弹出的视频图标-->
+				<div class="videocover">
+					<!--
+                    	作者：liujianguangaaa@163.com
+                    	时间：2016-04-26
+                    	描述：
+                    <a href="video/domigoshejishipian.mp4" target="_blank">-->
+					<img src="${base}/assets/biz-logic/images/vedio-a9.jpg" width="755" height="480" id="vedio-left-1">
+						
+					<!--</a>-->
+				</div>				
+			</div>
+            
+            <div class="news-vedio">
+               <h1>新闻资讯</h1>
+               <div class="p-title">
+                 <h2><a href="news/detail?id=${newsModel.id}">${newsModel.title}”</a></h2>
+                 <p class="date">
+					   ${newsModel.update_time,"yyyy年MM月dd日"}
+                 </p>
+                 <p>
+                 	<a href="news/detail?id=${newsModel.id}">
+                 		<img src="${base}/assets/biz-logic/images/news-img.jpg" />
+                 	</a>
+                 </p>
+                 <p>
+                 	<%
+                 	var ccc;
+                 	if(strutil.length(newsModel.summary) > 130){
+                 	     var bbb = strutil.subStringTo(newsModel.summary,0,130);
+                 	     ccc = bbb+"...";
+                 	     }else{
+                 	     ccc = newsModel.summary;
+                 	     }
+                 	     %>
+                 		   ${ccc}
+                 	
+                 </p>
+                 <p class="more"><a href="${base}/news"><img src="${base}/assets/biz-logic/images/more.jpg" /></a></p>
+               </div>            
+            </div>
+		</div>
+		<!-- 代码 vedio结束 -->
+
+		<!-- footer start --> 
+		<% include("../common/footer.html"){} %>
+		<!-- footer end --> 
+		
+	</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<script type="text/javascript" src="${base}/assets/biz-logic/js/lrtk.js"></script>
+<% include("../common/common.html"){} %>
+	<body>
+	<% include("../common/nav-head.html"){} %>
+	<style>
+#playBox .pre{ cursor:pointer; width:11px; height:20px; background:none; position:absolute; top:165px; left:60px; z-index:10;}
+#playBox .next{ cursor:pointer; width:11px; height:20px; background:none; position:absolute; top:165px; right:60px; z-index:10;}
+
+#playBox .smalltitle .thistitle{  background:url(${base}/assets/biz-logic/images/net.jpg) no-repeat; color:#6B6B6B; }
+#playBox .smalltitle {width:1140px; height:10px; position:absolute; bottom:50px; left:1030px; z-index:10}
+#playBox .smalltitle ul{ width:1100px; margin:0 auto; }
+#playBox .smalltitle ul li{ border-radius:0px; width:19px; height:19px; line-height:19px; text-align:center; margin:0 5px; background:url(${base}/assets/biz-logic/images/nex.jpg) no-repeat; float:left; overflow:hidden;*display:inline;*zoom:1; color:#fff;}
+</style>
+	<!-- 代码 banner开始 -->
+<div id="playBox" style="height:350px;">
+　 <div class="pre"></div>
+  <div class="next"></div>　　
+  <div class="smalltitle" >
+　　　　<ul>
+	　　<li class="thistitle">1</li>
+	　　<li>2</li>               
+　　　　</ul>
+　　</div>
+　　<ul class="oUlplay">
+　　　　<li><img src="${base}/assets/biz-logic/images/img/news-banner1.jpg" /></li>
+　　　　<li><img src="${base}/assets/biz-logic/images/img/news-banner2.jpg" /></li>    
+　　</ul>
+</div>
+<!-- 代码 banner结束 -->
+<div id="content">
+  <div class="banner-news"></div>  
+   
+  <!-- news start --> 
+  <div class="item_box">
+        <h1>
+				<span>
+					<img src="${base}/assets/biz-logic/images/news-ft.jpg" />
+				</span>
+				<span class="news-tem">${source}</span>
+				<span>
+					<img src="${base}/assets/biz-logic/images/news-ft.jpg" />
+				</span>
+			</h1>
+    <div class="news_list">
+    <%
+          for(news in newsList){ 
+         var  detail = base + "/news/detail?id="+ news.id;
+            	%>
+      <dl>
+        <dt>
+          <b>${news.day}</b>
+          <br>
+          <span class="english"> ${news.month}月 </span>
+        </dt>
+        <dd>
+          <p class="tit"><a href="${detail}">${news.title}</a></p>
+          <p class="date">${news.update_time,'yyyy-MM-dd'} ${news.editor}</p>
+          <p class="txt">${news.summary}</p>
+          <p class="more"><a href="${detail}">阅读全文</a></p>
+        </dd>
+      </dl>
+         <%	}	%>
+      <!-- 新闻分页news start --> 
+      <div class="page-square page-right">
+        <div class="wrapper">
+          <ul class="page-ul">
+            <li>
+            <% if(newspage.pageNumber == 1) {%>
+	            <span class="previous-off" disable="disable"}>
+	            	上一页
+	            </span>
+	            <% }else {%>
+	            <span class="previous-off" disable="disable"}>
+	            	<a href="${base}/news?source=${source}&page=${newspage.pageNumber-1}">上一页</a>
+	            </span>
+	            <% }%>
+            </li>
+            <%
+            for(var i=0;i<newspage.totalPage;i++){
+            %>
+            <li><a href="${base}/news?source=${source}&page=${i+1}">${i+1}</a></li>
+            <%
+            }
+            %>
+            
+            <li>
+            	
+            	 <% if(newspage.pageNumber == newspage.totalPage) {%>
+	           	<span class="previous-off" disable="disable"}>
+	            	下一页
+	            </span>
+	            <% }else {%>
+	            <a class="next" href="${base}/news?source=${source}&page=${newspage.pageNumber+1}">下一页</a>
+	            <% }%>
+            	
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+     
+</div>
+
+	<!-- footer start --> 
+	<% include("../common/footer.html"){} %>
+		<!-- footer end --> 
+<body>
+</body>
+</html>

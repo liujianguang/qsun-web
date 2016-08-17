@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<% include("../common/common.html"){} %>
+	<body>
+	<% include("../common/nav-head.html"){} %>
+<!-- 代码 在线留言 -->
+<div class="scroll-content">
+  <p><img src="${base}/assets/biz-logic/images/contact.jpg" /></p>
+  <div class="content" style="background:#FFF">
+    <form id="messageForm" method="post" action="${base}/message/add">
+      <div class="form">
+        <div class="form-group">
+          <div class="group-ul">
+            <dl id="j_item_name" class="">
+              <dt><em class="red">*</em>名字：</dt>
+              <dd><input id="j_name" class="text textl check-notNull check-cn" type="text" placeholder="请填写您的姓名" name="message.name"></dd>
+            </dl>
+            <dl id="j_item_phone" class="">
+              <dt><em class="red">*</em>电话：</dt>
+              <dd><input id="j_phone" class="text textl check-notNull check-phoneNumber" type="text" placeholder="请填写您的手机号码" name="message.telephone"></dd>
+            </dl>
+            <dl id="j_item_email">
+              <dt><em class="red">*</em>邮箱：</dt>
+              <dd><input id="j_email" class="text textl check-email" type="text" placeholder="请填写您的电子邮箱" name="message.email"></dd>
+            </dl>
+            <dl id="j_item_company">
+              <dt>公司：</dt>
+              <dd><input id="j_companyname" class="text textl check-notNull check-companyName" type="text" placeholder="请填写您的公司名称" name="message.company"></dd>
+            </dl>
+          </div>
+        </div>
+        <dl id="j_item_words" class="item-words">
+          <dt><em class="red">*</em>内容：</dt>
+          <dd><textarea id="j_content" class="text" placeholder="请告诉我们您公司的业务需求，时间及成本规划等。我们通常会在2个工作日之内与您取得联系。" name="message.message"></textarea></dd>
+        </dl>
+        <div class="submit">
+          <a id="j_btn_send" class="btn-send btnf-sign" href="javascript:submit()">发送</a>
+          <input id="j_yam" class="text-yam" type="text" placeholder="请输入验证码" name="captcha">
+          <a class="btn-yam" title="看不清楚？点击刷新" href="javascript:document.getElementById('yzm').click();">
+          	<img id="yzm" width="92" height="40" alt="yam" onclick="this.src='${base}/captcha/index?d='+new Date()" src="${base}/captcha/index">
+          	刷新一下
+          	</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+function submit() {
+	//$("#messageForm").submit();
+	var str_data=$("#messageForm input").map(function(){
+	 return ($(this).attr("name")+'='+$(this).val());
+	}).get().join("&");
+	$.ajax({
+		   type: "POST",
+		   url: "${base}/message/add",
+		   data: $("#messageForm").serialize(),
+		   success: function(msg){
+		     alert( "Data Saved: " + msg.m );
+		   }
+		});
+}
+</script>
+<!-- 代码 在线留言结束 -->
+
+
+<!-- footer start --> 
+<% include("../common/footer.html"){} %>
+<!-- footer end --> 
+<body>
+</body>
+</html>

@@ -1,0 +1,160 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, input, select {margin:0; padding:0; border:0 none; outline:0; color:inherit;}
+html, body {width:100%; height:100%; background-color: #f7f7f7; }
+body {margin:0 auto;  font: 14px/1.8 Microsoft Yahei,Helvetica,Arial,sans-serif; vertical-align:baseline; overflow-y:scroll; color: #4d4d4d;}
+h1 {font-weight:bold; font-size:18px; line-height:18px; color:#474545;}
+h3 {font-weight:normal; font-size:12px; color:#746969;}
+h2, h4, h5, h6 {font-weight:normal; font-size:100%;}
+table {border-collapse:separate; border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+a {text-decoration:none;}
+img { outline: medium none;  vertical-align: middle; }
+:focus {outline:0;}
+.clear { clear: both; height: 1px; overflow: hidden; }
+/*img{ vertical-align:top;}*/
+ol, ul {list-style:none;}
+input, textarea, select, button {font-weight:inherit; font-size:inherit; *font-size:100%; font-family:inherit;}
+address, caption, cite, code, dfn, em, th, var {  font-style: normal; font-weight: normal; }
+
+
+/**************** 全局公用样式 ****************/
+body { max-width:1920px; min-width:1140px; +overflow:hidden;}
+.g-wrap {position:relative; margin:0 auto; width:1120px; padding:0px 10px; height:100%; overflow:hidden; background-color:#fff;}
+.header {height:62px; width:100%;}
+.logo { padding:15px 0px; }
+.nav { position:absolute; top:0; left:200px; overflow:hidden; width:680px;}
+.nav li {float: left; margin: 0 1px; height:62px; }
+.nav a { display:block; font-weight:bold; color:#0A2F49; margin:0px 30px; font-size:14px; text-align:center; padding-top:18px; }
+.nav a:hover, a.nav_curr { border-bottom:2px solid #AB1D30; color: #AB1D30;  }
+.nav-en{ position:absolute; top:0; left:894px; overflow:hidden; width:80px; font-size: 12px; font-weight: bold; line-height:62px; text-align: center; }
+.nav-en a:hover { border-bottom: 2px solid #ab1d30; color: #ab1d30;  }
+
+.partook { position:absolute; top:0; right:10px; overflow:hidden; }
+.partook ul{ margin-top:10px; width:140px; height:20px; }
+.partook ul li{ margin:0px 4px; float:left; }
+.wanted1:hover { background:url(../images/f-1.png) no-repeat; cursor: pointer;}
+.wanted1 { background:url(../images/f.png) no-repeat; width:20px; height:20px; }
+
+.wanted2 { background:url(../images/qq-zx.png) no-repeat; width:20px; height:20px; }
+.wanted2:hover { background:url(../images/qq-zx-1.png) no-repeat; cursor: pointer;}
+
+.wanted3 { background:url(../images/e-main.png) no-repeat; width:20px; height:20px; }
+.wanted3:hover { background:url(../images/e-main-1.png) no-repeat; cursor: pointer;}
+
+.wanted4 { background:url(../images/wb.png) no-repeat; width:20px; height:20px; }
+.wanted4:hover { background:url(../images/wb-1.png) no-repeat; cursor: pointer;}
+
+.wanted5 { background:url(../images/wx.png) no-repeat; width:20px; height:20px; }
+.wanted5:hover { background:url(../images/wx-1.png) no-repeat; cursor: pointer;}
+
+.telephone { color: #CE0C18;  font-family: Arial,sans-serif; font-size: 17px; margin-top:-5px;　}
+.icon { display: inline-block; height:20px; margin-left: 4px; margin-right: 4px; vertical-align: -2px; width: 20px; background:url(../images/tel.png) no-repeat;　}
+.terminal{ float:left; width:370px; margin-right:15px; margin-top:15px; height:180px; }
+
+.search { position:absolute; top:0; right:10px; overflow:hidden; }
+.search .form { border: 1px solid #0A2F49; border-radius: 14px; background:#0A2F49; height: 20px; margin:20px 0px; position: relative; width: 150px; }
+.search .form .text { background:none; border-radius: 14px; color: #fff; float: left; font-size: 14px; height: 20px; line-height: 22px;
+    outline: medium none;  padding: 0px 10px; width: 112px; }
+.search .form .button { background-color: transparent; border: medium none; color: #fff; cursor: pointer; font-size: 14px; font-weight: bold; height: 16px; outline: medium none;
+    position: absolute; right: 6px; text-align: center; top: 2px; width: 16px; }
+.icon-search { background-image: url("../images/icons.png"); }
+
+.menu-top{ height:32px; width:100%; position:absolute; z-index:1;}
+.menu-web{ margin:0 auto; width:1140px; line-height:32px; height:32px; }
+.menu-web ul{ color: #fff; width: 104px; margin-left:296px; height:170px; background:url(../images/menu-top.png) no-repeat scroll center top; padding-top:10px; margin-top:-10px; }
+.menu-web li{ padding:0px 24px; background:#0D304B; text-align:left; border-bottom:1px solid #05111c; border-top:1px solid #154b78; line-height:44px; }
+.menu-web li:hover { background:#ab1d30; color: #fff; padding:0px 24px;  }
+
+/****************  banner广告样式 ****************/
+#divSmallBox{overflow:hidden;*display:inline;*zoom:1;width:10px;height:10px;margin:0 5px;border-radius:10px;background:#ffffff;}
+#playBox{ width:1140px; height:640px; margin:0 auto; background:#333; position:relative; overflow:hidden;}
+#playBox .oUlplay { width:99999px; position:absolute; left:0; top:0;}
+#playBox .oUlplay li{ float:left;}
+#playBox .pre{ cursor:pointer; width:11px; height:20px; background:url(../images/l.png) no-repeat; position:absolute; top:310px; left:60px; z-index:10;}
+#playBox .next{ cursor:pointer; width:11px; height:20px; background:url(../images/r.png) no-repeat; position:absolute; top:310px; right:60px; z-index:10;}
+#playBox .smalltitle {width:1140px; height:10px; position:absolute; bottom:60px; z-index:10}
+#playBox .smalltitle ul{ width:132px; margin:0 auto;}
+#playBox .smalltitle ul li{ width:22px; height:22px; margin:0 5px; border-radius:10px; background:#ffffff; float:left; overflow:hidden;*display:inline;*zoom:1;}
+#playBox .smalltitle .thistitle{  background:url(../images/now.png) no-repeat;}
+
+
+#playBox .newstitle .thistitle{  background:url(../images/net.jpg) no-repeat; color:#6B6B6B; }
+#playBox .newstitle {width:1140px; height:10px; position:absolute; bottom:50px; left:1030px; z-index:10}
+#playBox .newstitle ul{ width:1100px; margin:0 auto; }
+#playBox .newstitle ul li{ width:19px; height:19px; line-height:19px; text-align:center; margin:0 5px; background:url(../images/nex.jpg) no-repeat; float:left; overflow:hidden;*display:inline;*zoom:1; color:#fff;}
+
+
+/****************  banner1广告样式 ****************/
+#divSmallBox{overflow:hidden;*display:inline;*zoom:1;width:10px;height:10px;margin:0 5px;border-radius:10px;background:#ffffff;}
+#playBox1{ width:1280px; height:640px; margin:0 auto; background:#333; position:relative; overflow:hidden;}
+#playBox1 .oUlplay { width:99999px; position:absolute; left:0; top:0;}
+#playBox1 .oUlplay li{ float:left;}
+#playBox1 .pre{ cursor:pointer; width:11px; height:20px; background:url(../images/l.png) no-repeat; position:absolute; top:310px; left:100px; z-index:10;}
+#playBox1 .next{ cursor:pointer; width:11px; height:20px; background:url(../images/r.png) no-repeat; position:absolute; top:310px; right:100px; z-index:10;}
+#playBox1 .smalltitle {width:1280px; height:10px; position:absolute; bottom:60px; z-index:10}
+#playBox1 .smalltitle ul{ width:130px; margin:0 auto;}
+#playBox1 .smalltitle ul li{ width:22px; height:22px; margin:0 5px; border-radius:10px; background:#ffffff; float:left; overflow:hidden;*display:inline;*zoom:1;}
+#playBox1 .smalltitle .thistitle{  background:url(../images/now.png) no-repeat;}
+
+
+/**************** partner ****************/
+.partner{ width:1080px; margin:12px auto; background:#ce0c18; padding:40px 30px; }
+.partner-beg{ background:url(../images/partner-map.png) 520px 0px no-repeat;  height:254px; }
+.partner-now{ width:1080px; margin:0 auto; }
+.partner-now h1{ padding:10px 0px; font-size:16px; color:#fff; font-weight:normal; }
+.partner-now ul{ width:720px; float:left; }
+.partner-now li{ width:180px; float:left; padding:10px 0px; display:block;}
+.partner-now li.font-sz{ font-size:21px; color:#FFF; padding:0px 0px;}
+
+
+/**************** footer ****************/
+.footer{ width:1140px; margin:0 auto; background:#CE0C18; padding:20px 0px; }
+.copyright{ width:1062px; margin:0 auto; }
+.copyright .promptly{ color:#fff; width:500px; float:left;}
+.copyright ul{ width:200px; float:left; margin-left:150px;}
+.copyright ul li{ float:left; padding:0px 5px; color:#fff; }
+.copyright .footer-reg{ margin-left:200px;}
+.copyright .footer-fot{ margin-left:50px;}
+
+
+
+.app-web { margin:0px auto; width:1270px; background-color:#fdf1f1; height:452px; background:url(../images/app-bag.png) no-repeat left bottom; position:relative; }
+.app-bgk { background-color:#fdf1f1; }
+.dogo-app { background: #ed7370 none repeat scroll 0 0; border-radius: 24px; color: #fff; display: inline-block; font-size: 26px; height: 48px; line-height: 48px; margin-bottom: 20px;
+    padding: 0 40px; text-align: center; }
+.app-pad { padding:40px 40px; }
+.app-img5{ position:absolute; right:40px; top:50px;}
+.app-cd { margin-left:415px; width:580px; position:relative; margin-top:15px; color:#595757; }
+.app-cd ul { float:left; width:270px;}
+.app-cd .text{ font-size:18px; margin-top:10px; line-height:20px; }
+.app-cd .top{ margin-top:40px; }
+.app-cd .left{ margin-left:40px; }
+
+.music-song { margin:0px auto; width:1270px; background-color:#d7eee4; height:564px; }
+.music-song .text{ font-size:16px; margin-top:6px; margin-left:28px; }
+.music-song .img{ margin-left:28px; margin-top:28px; }
+
+.music-baidu { margin:0px auto; width:1270px; background-color:#a0d4ea; height:480px; }
+.music-baidu .text{ font-size:16px; margin-top:6px; margin-left:28px; }
+.music-baidu .img{ margin-left:28px; margin-top:28px; }
+
+.music-kugou { margin:0px auto; width:1270px; background-color:#d6d6f0; height:480px; }
+.music-kugou .text{ font-size:16px; margin-top:6px; margin-left:28px; }
+.music-kugou .img{ margin-left:28px; margin-top:28px; }
+
+.music-xiami { margin:0px auto; width:1270px; background-color:#ffd1ed; height:440px; }
+.music-xiami .text{ font-size:16px; margin-top:6px; margin-left:28px; }
+.music-xiami .img{ margin-left:28px; margin-top:28px; }
+
+.music-163 { margin:0px auto; width:1270px; background-color:#f1d7d6; height:470px; }
+.music-163 .text{ font-size:16px; margin-top:6px; margin-left:28px; }
+.music-163 .img{ margin-left:28px; margin-top:28px; }
+
+
+
+
+

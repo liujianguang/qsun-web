@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<script type="text/javascript" src="${base}/assets/biz-logic/js/lrtk.js"></script>
+	<title>${news.title}</title>
+<% include("../common/common.html"){} %>
+	<body>
+	<% include("../common/nav-head.html"){} %>
+<style>
+#playBox .pre{ cursor:pointer; width:11px; height:20px; background:none; position:absolute; top:165px; left:60px; z-index:10;}
+#playBox .next{ cursor:pointer; width:11px; height:20px; background:none; position:absolute; top:165px; right:60px; z-index:10;}
+
+#playBox .smalltitle .thistitle{  background:url(../images/net.jpg) no-repeat; color:#6B6B6B; }
+#playBox .smalltitle {width:1140px; height:10px; position:absolute; bottom:50px; left:1030px; z-index:10}
+#playBox .smalltitle ul{ width:1100px; margin:0 auto; }
+#playBox .smalltitle ul li{ border-radius:0px; width:19px; height:19px; line-height:19px; text-align:center; margin:0 5px; background:url(../images/nex.jpg) no-repeat; float:left; overflow:hidden;*display:inline;*zoom:1; color:#fff;}
+</style>
+<!-- 代码 banner开始 -->
+<div id="playBox" style="height:350px;">
+　　<div class="newstitle" >
+　　　　<ul>
+	　　<li class="thistitle">1</li>
+	　　<li>2</li>               
+　　　　</ul>
+　　</div>
+　　<ul class="oUlplay">
+　　　　<li><img src="${base}/assets/biz-logic/images/img/news-banner1.jpg" /></li>
+　　　　<li><img src="${base}/assets/biz-logic/images/img/news-banner2.jpg" /></li>    
+　　</ul>
+</div>
+<!-- 代码 banner结束 -->
+
+<div class="scroll-content">
+   
+  <!-- news start --> 
+  <div class="news-wap">   
+    <div class="news_detail">
+      <h1>${news.title}</h1>
+      <p class="date">时间：${news.create_time,"yyyy年MM月dd日"}<span class="icp">编辑：${news.editor}</span></p>
+      <div class="news_main">
+        ${news.content}
+      </div>
+      <p class="news_fz"><a class="back1" href="${base}/news?source=${news.source}">返回列表</a></p>
+      
+    </div>    
+  </div> 
+     
+</div>
+
+<!-- footer start --> 
+	<% include("../common/footer.html"){} %>
+		<!-- footer end --> 
+<body>
+</body>
+</html>

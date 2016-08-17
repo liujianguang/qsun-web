@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<% include("../common/common.html"){} %>
+	<body>
+	<% include("../common/nav-head.html"){} %>
+
+<div id="content">
+  <div class="banner-news"></div>  
+   
+  <!-- news start --> 
+  <div class="item_box">
+        <h1>
+				<span>
+					<img src="images/news-ft.jpg" />
+				</span>
+				<span class="news-tem">企业动态</span>
+				<span>
+					<img src="images/news-ft.jpg" />
+				</span>
+			</h1>
+    <div class="news_list">
+    <%
+          for(news in newsList){ 
+         var  detail = base+"/news/detail?id="+ news.id;
+            	%>
+      <dl>
+        <dt>
+          <b>${news.day}</b>
+          <br>
+          <span class="english"> ${news.month}月 </span>
+        </dt>
+        <dd>
+          <p class="tit"><a href="${detail}">${news.title}</a></p>
+          <p class="date">${news.createTime} ${news.editor}</p>
+          <p class="txt">${news.summary}</p>
+          <p class="more"><a href="${detail}">阅读全文</a></p>
+        </dd>
+      </dl>
+         <%	}	%>
+      <!-- 新闻分页news start --> 
+      <!--
+      <div class="pagenum">
+        <span>共<i>38</i>条记录 每页显示5条 当前2/8页</span>
+        <a class="first" href="/news?currentPage=1"> </a>
+        <a class="prev" href="/news?currentPage=1"> </a>
+        <a class="next" href="/news?currentPage=3"> </a>
+        <a class="last" href="/news?currentPage=8"></a>
+        
+        <span>
+          <input id="inputPage" type="text">
+          <input class="go" type="button" onclick="inputPage()" value="GO">
+        </span>
+      </div>
+      -->
+    </div>
+  </div> 
+     
+</div>
+
+	<!-- footer start --> 
+	<div class="footer">
+			<div class="copyright">
+               <p class="promptly">© 香港旗晟控股有限公司. All Rights Reserved 渝ICP备14009216号-5 </p>
+               <ul>
+                 <li>法律声明</li>
+                 <li>|</li>
+                 <li>网站地图</li>
+                 <li>|</li>
+                 <li><a href="contact.html">联系我们</a></li>
+               </ul>
+               <select>               
+                 <option value="1">重庆市音乐一号科技有限公司</option> 
+                 <option value="2">重庆市德古智能科技有限公司</option> 
+                 <option value="2">深圳倍盈德科技有限公司</option> 
+                 <option value="2">香港大唐商贸有限公司</option> 
+                 <option value="2">重庆唐晟实业有限公司</option>
+                 <option value="2">深圳智英电子有限公司</option>           
+               </select>            
+			</div>
+		</div>
+		<!-- footer end --> 
+<body>
+</body>
+</html>
